@@ -6,6 +6,7 @@ namespace CarProjectsPractice1
     {
         static void Main(string[] args)
         {
+            Car simpleCar = new Car();
             Console.WriteLine("Hello World!");
         }
     }
