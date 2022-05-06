@@ -6,7 +6,7 @@ namespace CarProjectsPractice1
 {
     class Car
     {
-        private int registrationNumber;
+        public int registrationNumber;
         private string model;
         private DateTime year;
         private int maxSpeed;
@@ -16,9 +16,9 @@ namespace CarProjectsPractice1
         private int oilLevel;
         private string color;
         private string type;
-        private int numberDoors;
+        private int numberDoors { get; set; }
 
-        public static string softwareVersion;
+        public static string softwareVersion { get; set; } = "sddsad01";
 
         public Car(int registrationNumber, string model, DateTime year, int maxSpeed, int minSpeed,
                    int fuelLevel, int waterLevel, int oilLevel, string color, string type, int numberDoors)
@@ -36,8 +36,8 @@ namespace CarProjectsPractice1
             this.numberDoors = numberDoors;
         }
 
-
-
-
+        public static string getNothing() {
+            return softwareVersion;
+        }
     }
 }
