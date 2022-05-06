@@ -36,6 +36,67 @@ namespace CarProjectsPractice1
             this.numberDoors = numberDoors;
         }
 
+        public void advanceCar(int fuelwasted, int waterwasted, int oilwasted)
+        {
+            int totalFuelreminder = this.fuelLevel - fuelwasted;
+            int totalwaterreminder = this.waterLevel - waterwasted;
+            int totaloilreminder = this.oilLevel - oilwasted;
+
+
+            if (totalFuelreminder < 0 || totalwaterreminder < 0 || totaloilreminder < 0)
+            {
+                Console.WriteLine("you can't advance you don't have enough fuel, waiter or oil. This is a message from ABS system  ");
+            }
+            else if (totalFuelreminder == 0 || totalwaterreminder == 0 || totaloilreminder == 0) {
+                this.fuelLevel = totalFuelreminder;
+                this.waterLevel = totalwaterreminder;
+                this.oilLevel = totaloilreminder;
+
+                this.noFuel();
+                this.noWater();
+                this.noOil();
+            }
+            else {
+                this.fuelLevel = totalFuelreminder;
+                this.waterLevel = totalwaterreminder;
+                this.oilLevel = totaloilreminder;
+                Console.WriteLine( "you can advance it remnids " + totalFuelreminder + " of fuel" + totalwaterreminder + " of water and "
+                    + totaloilreminder + " of oil");
+            }
+        }
+
+        public string addFuel(int moreFuel) {
+            this.fuelLevel = this.fuelLevel + moreFuel;
+            return "fuel added success";
+        }
+
+        public string addWater(int moreWater)
+        {
+            this.waterLevel = this.waterLevel + moreWater;
+            return "Water added success";
+        }
+
+        public string addOil(int moreOil)
+        {
+            this.oilLevel = this.oilLevel + moreOil;
+            return "Oil added success";
+        }
+
+        private void noFuel() {
+            if (this.fuelLevel == 0) {
+                Console.WriteLine( "fuel level 0 this is a warning message");
+            }
+        }
+
+        private void noWater() {
+            if (this.waterLevel == 0)
+                Console.WriteLine("Watter level is 0 this is a warning message");
+        }
+
+        private void noOil() {
+            if (this.oilLevel == 0)
+                Console.WriteLine("Oil level is 0 this is a warning message");
+        }
         public static string getNothing() {
             return softwareVersion;
         }

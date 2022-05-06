@@ -19,7 +19,19 @@ namespace CarProjectsPractice1
 
             Car.softwareVersion = "asdas0.2";
             Console.WriteLine(Car.softwareVersion);
-           
+
+            Console.WriteLine("------------------carAdvance------------");
+            simpleCar.advanceCar(1, 1, 1);
+            simpleCar2.advanceCar(100, 1, 1);
+
+            Console.WriteLine("----------------add fuel water and oil-------------------------");
+            Console.WriteLine(simpleCar.addFuel(20));
+            Console.WriteLine(simpleCar.addWater(100));
+            Console.WriteLine(simpleCar.addOil(30));
+
+            Console.WriteLine("----------------------automated message-----------------");
+            simpleCar.advanceCar(1, 1, 492);
+            simpleCar.advanceCar(2, 1, 1);
         }
     }
 }

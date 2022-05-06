@@ -10,3 +10,4 @@ C:\Users\win10\source\repos\CarProjectsPractice1\CarProjectsPractice1\obj\Debug\
 C:\Users\win10\source\repos\CarProjectsPractice1\CarProjectsPractice1\obj\Debug\netcoreapp3.1\CarProjectsPractice1.dll
 C:\Users\win10\source\repos\CarProjectsPractice1\CarProjectsPractice1\obj\Debug\netcoreapp3.1\CarProjectsPractice1.pdb
 C:\Users\win10\source\repos\CarProjectsPractice1\CarProjectsPractice1\obj\Debug\netcoreapp3.1\CarProjectsPractice1.genruntimeconfig.cache
+C:\Users\win10\source\repos\CarProjectsPractice1\CarProjectsPractice1\obj\Debug\netcoreapp3.1\CarProjectsPractice1.csproj.AssemblyReference.cache
