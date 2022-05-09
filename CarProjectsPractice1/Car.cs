@@ -7,18 +7,17 @@ namespace CarProjectsPractice1
     class Car
     {
         public int registrationNumber;
-        private string model;
+        private string model ;
         private DateTime year;
         private int maxSpeed;
         private int minSpeed;
-        private int fuelLevel;
-        private int waterLevel;
-        private int oilLevel;
         private string color;
         private string type;
-        private int numberDoors { get; set; }
-
-        public static string softwareVersion { get; set; } = "sddsad01";
+        private int numberDoors;
+        private int fuelLevel { get; set; }
+        private int waterLevel { get; set; }
+        private int oilLevel { get; set; }
+        internal static string softwareVersion { get; set; } = "001";
 
         public Car(int registrationNumber, string model, DateTime year, int maxSpeed, int minSpeed,
                    int fuelLevel, int waterLevel, int oilLevel, string color, string type, int numberDoors)
@@ -36,32 +35,32 @@ namespace CarProjectsPractice1
             this.numberDoors = numberDoors;
         }
 
-        public void advanceCar(int fuelwasted, int waterwasted, int oilwasted)
+        public void advanceCar(int fuelWasted, int waterWasted, int oilWasted)
         {
-            int totalFuelreminder = this.fuelLevel - fuelwasted;
-            int totalwaterreminder = this.waterLevel - waterwasted;
-            int totaloilreminder = this.oilLevel - oilwasted;
+            int totalFuelRemaining = this.fuelLevel - fuelWasted;
+            int totalWaterRemaining = this.waterLevel - waterWasted;
+            int totalOilRemaining = this.oilLevel - oilWasted;
 
 
-            if (totalFuelreminder < 0 || totalwaterreminder < 0 || totaloilreminder < 0)
+            if (totalFuelRemaining < 0 || totalWaterRemaining < 0 || totalOilRemaining < 0)
             {
-                Console.WriteLine("you can't advance you don't have enough fuel, waiter or oil. This is a message from ABS system  ");
+                Console.WriteLine("You can't advance and you don't have enough fuel, waiter or oil. This is a message from ABS system  ");
             }
-            else if (totalFuelreminder == 0 || totalwaterreminder == 0 || totaloilreminder == 0) {
-                this.fuelLevel = totalFuelreminder;
-                this.waterLevel = totalwaterreminder;
-                this.oilLevel = totaloilreminder;
+            else if (totalFuelRemaining == 0 || totalWaterRemaining == 0 || totalOilRemaining == 0) {
+                this.fuelLevel = totalFuelRemaining;
+                this.waterLevel = totalWaterRemaining;
+                this.oilLevel = totalOilRemaining;
 
                 this.noFuel();
                 this.noWater();
                 this.noOil();
             }
             else {
-                this.fuelLevel = totalFuelreminder;
-                this.waterLevel = totalwaterreminder;
-                this.oilLevel = totaloilreminder;
-                Console.WriteLine( "you can advance it remnids " + totalFuelreminder + " of fuel" + totalwaterreminder + " of water and "
-                    + totaloilreminder + " of oil");
+                this.fuelLevel = totalFuelRemaining;
+                this.waterLevel = totalWaterRemaining;
+                this.oilLevel = totalOilRemaining;
+                Console.WriteLine("you can advance! It is remaining " + totalFuelRemaining + " of fuel, " + totalWaterRemaining + " of water and "
+                    + totalOilRemaining + " of oil");
             }
         }
 
@@ -96,9 +95,6 @@ namespace CarProjectsPractice1
         private void noOil() {
             if (this.oilLevel == 0)
                 Console.WriteLine("Oil level is 0 this is a warning message");
-        }
-        public static string getNothing() {
-            return softwareVersion;
         }
     }
 }
